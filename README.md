@@ -142,3 +142,81 @@ if __name__ == "__main__":
     devueltas= precio_a_pagar(p,m,h)
     print("la cantidade de dinero restante es " +str(devueltas))
  ```
+
+3.Escriba una función recursiva para calcular la operación de la potencia. 
+
+- para este punto base la recursividad en tres casos el primero es entender que la pontencia 0 de cualquier numero es 1, el segundo es entender que la potencia 1 en cualquier numero es si mismo y por ultimo la potencia n de un numero es el numero elevado a la n; dados estos casos plantee un programa con tres condicionales recursivas las cuales permitiran calcular la potencia de una base y un exponente dado
+
+ ```pseudocode
+  n: int
+i: int
+def potencia(n:int, i:int)->int:
+  if i==0:
+    return 1
+  elif i==1:
+    return n
+  else:
+    return n**i
+
+if __name__ == "__main__":
+  n = int(input("Ingrese numero base de la potencia: "))
+  i = int(input("ingresa el expinente de la potencia: "))
+  resultpotencia = potencia(n,i)
+  print("el resultado de la potencia con base " + str(n) + " elevadas a " +str(i)+ " es " + str(resultpotencia))
+ ```
+4. Utilice la siguiente plantilla de code para contar el tiempo:
+
+ ```pseudocode
+import time
+
+start_time = time.time()
+# instrucciones sobre las cuales se quiere medir tiempo de ejecución
+end_time = time.time()
+
+timer = end_time - start_time
+print(timer)
+ ```
+
+Realice pruebas para calcular fibonacci con iteración o con recursión. Determine desde que número de la serie la diferencia de tiempo se vuelve significativa. Importante: Revisar este hilo.
+
+programa implementando el medidor de tiempo:
+
+ ```pseudocode
+import time
+
+start_time = time.time()
+def fibonacci(n: int) -> int:
+    i: int = 1
+
+    n1: int =0
+    n2: int =1
+    print(1)
+    while i <= n-1:
+        sumfibo  = n1 + n2
+
+        print(sumfibo)
+        n1=n2
+        n2=sumfibo
+        i += 1
+
+    return sumfibo
+
+n = int(input("Ingrese número de elementos de la sucesión de Fibonacci: "))
+sucesionFibo = fibonacci(n)
+print("La sucesión de Fibonacci hasta "+str(n)+" es " +str(sucesionFibo))
+
+end_time = time.time()
+
+timer = end_time - start_time
+print( "el tiempo es " + str(timer))
+ ```
+
+analisis: al evaluar en varios casos se puede evidenciar que al ingresar un numero entre 1-100 el tiempo estimado ronda entre 2 a 2,5 segundos; por tro lado al inngresar numeros como 1000 o mayores se puede evidenciar una diferencia nototria ya que pasa de 2 segundos a 4 segundos en su proceso de realizacion.
+
+5.Crear cuenta en stackoverflow y adjuntar imagen en el repo
+
+![stackoverflow](https://github.com/AndresBustamant/Reto_9/assets/141858005/ed68aadd-9c9c-485c-8cdc-64310c8e5a0c)
+
+6. Cosas de adultos....ir a linkedin y crear perfil....NO IMPORTA que estén iniciando, si tienen tiempo para redes poco útiles como fb, insta, o tiktok tienen tiempo para crear un perfil mamalón. Dejar enlace en el repo.
+
+https://www.linkedin.com/public-profile/settings
